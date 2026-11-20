@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 540" fill="none">
  <defs><pattern id="waves" x="0" y="0" width="60" height="30" patternUnits="userSpaceOnUse"><path d="M-10 15q15-10 30 0t30 0t30 0" stroke="#b9d2cc" stroke-opacity=".35" stroke-width=".8"/></pattern><pattern id="lines" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><path d="M0 0v8" stroke="#94b5a0" stroke-opacity=".25" stroke-width="2"/></pattern></defs>
- <rect width="700" height="540" fill="#dce9df"/>
  <rect width="700" height="540" fill="url(#waves)"/>
  <circle cx="563" cy="96" r="40" fill="#ecb28b"/>
  <circle cx="563" cy="96" r="51" stroke="#ecb28b" stroke-opacity=".45"/>
@@ -16,7 +15,4 @@
  <path d="M205 197C265 312 357 301 546 367M546 367Q488 271 438 382" stroke="#f7f6ef" stroke-width="5" stroke-linecap="round"/>
  <path d="M205 197C265 312 357 301 546 367M546 367Q488 271 438 382" stroke="#a96243" stroke-width="2" stroke-dasharray="5 7" stroke-linecap="round"/>
  <g fill="#a96243" stroke="#f7f6ef" stroke-width="3"><circle cx="205" cy="197" r="6"/><circle cx="546" cy="367" r="6"/><circle cx="438" cy="382" r="6"/></g>
- <g fill="#254b4b" font-family="Georgia,serif"><text x="73" y="83" font-size="30">Oʻahu</text><text x="521" y="496" font-size="32">Hawaiʻi</text><text x="126" y="241" font-size="17">Waikīkī</text><text x="561" y="357" font-size="18">Hilo</text><text x="371" y="409" font-size="18">Kona</text></g>
- <g fill="#436660" font-family="sans-serif" font-size="10" letter-spacing="2"><text x="74" y="59">01 / FIVE NIGHTS</text><text x="476" y="521">02 / FOUR NIGHTS</text><text x="36" y="502">A LITTLE ISLAND TIME</text></g>
- <path d="M632 219v-35m-7 12 7-12 7 12" stroke="#52776f" stroke-width="1.2"/><text x="628" y="174" font-family="sans-serif" font-size="10" fill="#52776f">N</text>
 </svg>

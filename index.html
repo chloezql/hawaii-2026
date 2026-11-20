@@ -7,31 +7,27 @@
   <meta name="description" content="2026 夏威夷旅行手册。10 天，从欧胡到大岛：每日路线、餐厅、地图与出行资料。">
   <title>夏威夷 · 一起去看海</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261119">
   <script src="data.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=20261119" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">跳到主要内容</a>
   <header class="site-header">
     <a class="brand" href="#overview" aria-label="夏威夷旅行首页"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M3 20c4-7 8 7 13 0s9 7 13 0M3 26c4-7 8 7 13 0s9 7 13 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="9" r="5" fill="currentColor"/></svg><span>hawaiʻi <i>2026</i></span></a>
-    <span class="header-dates">DEC 23 <span>—</span> JAN 01</span>
-    <a class="planning-label" href="#bookings"><span></span>规划中</a>
   </header>
   <nav class="view-nav" aria-label="主要导航">
-    <a href="#overview" data-view="overview"><span data-icon="sun"></span><span>旅行总览</span></a>
-    <a href="#day-2026-12-23" data-view="days"><span data-icon="calendar"></span><span>每日行程</span></a>
-    <a href="#places" data-view="places"><span data-icon="pin"></span><span>地点地图</span></a>
-    <a href="#bookings" data-view="bookings"><span data-icon="folder"></span><span>出行资料</span></a>
+    <a href="#overview" data-view="journey"><span data-icon="calendar"></span><span>旅程</span></a>
+    <a href="#places" data-view="places"><span data-icon="pin"></span><span>地图</span></a>
+    <a href="#bookings" data-view="bookings"><span data-icon="folder"></span><span>资料</span></a>
   </nav>
   <div class="site-layout">
-    <aside id="day-nav" aria-label="选择行程日期"></aside>
+    <nav id="day-nav" aria-label="切换行程日期" hidden></nav>
     <main id="content" tabindex="-1"></main>
   </div>
-  <footer class="site-footer"><a href="#overview">a little island time.</a><p>夏威夷境内时间为 HST（UTC−10）。航班使用出发地与目的地当地时间。</p><p>行程初稿 · 依据 2026/11/16 讨论整理</p></footer>
+  <footer class="site-footer"><a href="#overview">a little island time.</a><p>夏威夷当地时间 HST · 航班分别使用出发地与目的地时间</p></footer>
   <p id="announcement" class="sr-only" aria-live="polite"></p>
   <dialog id="detail-sheet" class="sheet" aria-labelledby="sheet-title"><div class="sheet-content"></div></dialog>
-  <dialog id="date-picker" class="date-picker" aria-labelledby="date-title"><div class="picker-content"></div></dialog>
   <noscript><div class="no-script">请启用 JavaScript 查看行程。旅行时间为 2026/12/23–2027/1/1，欧胡 5 晚、Hilo 2 晚、Kona 2 晚。所有预订待确认。</div></noscript>
 </body>
 </html>
