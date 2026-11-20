@@ -1,4 +1,4 @@
-/* 行程来源：2026/11/16 完整排班表；往返航班及欧胡酒店依据用户提供的预订截图更新。
+/* 行程来源：2026/11/16 完整排班表；往返航班、欧胡及 Hilo 酒店依据用户提供的预订截图更新。
    仅 confirmed 标记的项目已预订。截图未显示的航班号与到达时间不作推断。
    公开数据不包含姓名、订单号、预订确认号或原始截图。 */
 window.TRIP = {
@@ -10,7 +10,7 @@ window.TRIP = {
   ],
   hotels: [
     {id:'halepuna',name:'Halepuna Waikiki by Halekulani',confirmed:true,area:'Waikiki · 欧胡',in:'2026-12-23',out:'2026-12-28',nights:5,checkin:'15:00',checkout:'12:00',address:'2233 Helumoa Road, Honolulu, HI 96815',phone:'+1 808-921-7272',query:'Halepuna Waikiki by Halekulani 2233 Helumoa Road Honolulu HI 96815',note:'本次预订注明无度假村费。若入住当天 21:00 后抵达，须直接联系酒店，以免预订被取消。27 日停车安排待确认。'},
-    {id:'naniloa',name:'Grand Naniloa',area:'Hilo · 大岛东岸',in:'2026-12-28',out:'2026-12-30',nights:2,query:'Grand Naniloa Hotel Hilo Hawaii',note:'暂定住宿。28 日先寄存行李，观星团拟从这里接送，须以团方确认为准。'},
+    {id:'hilo-hawaiian',name:'Hilo Hawaiian Hotel',confirmed:true,area:'Hilo · 大岛东岸',in:'2026-12-28',out:'2026-12-30',nights:2,checkin:'15:00',checkout:'12:00',query:'Hilo Hawaiian Hotel Trademark Collection by Wyndham Hilo Hawaii',note:'预订注明免费自行停车和免费 Wi-Fi。房型、取消条款和行李寄存安排待补充；观星团能否到这家酒店接送、具体集合地点与时间须向团方确认。'},
     {id:'kona',name:'Kona 酒店待选',area:'Kailua-Kona · 大岛西岸',in:'2026-12-30',out:'2027-01-01',nights:2,query:null,note:'当前按住 Kailua-Kona 镇附近排。若改住 Waikoloa，1/1 上午改在 A-Bay／度假区活动，避免折返。'}
   ],
   rentals: [
@@ -75,18 +75,18 @@ window.TRIP = {
       ]
     },
     {
-      date:'2026-12-28',area:'Hilo',region:'hilo',title:'换一座岛，去云海上等日落',english:'From ocean blue to starlight.',intro:'上午飞到大岛东岸，下午交给观星团。从 Grand Naniloa 接送是当前方案。',hotel:'naniloa',checkout:'halepuna',transport:'HNL 还车 · ITO 取车 · 团车',route:['HNL','ITO','Grand Naniloa','Suisan','观星团'],tags:['岛间飞行','日落观星'],
-      meals:{breakfast:'退房前或机场简餐',lunch:'Suisan · poke',dinner:'视观星团是否含餐安排'},todo:['确认 HNL → ITO 航班及早上还车衔接','确定 ITO 取车、KOA 异地还车订单','确认 Grand Naniloa 住宿','确认观星团酒店接送、含餐及结束时间'],
+      date:'2026-12-28',area:'Hilo',region:'hilo',title:'换一座岛，去云海上等日落',english:'From ocean blue to starlight.',intro:'上午飞到大岛东岸，下午交给观星团。接送或集合地点待团方确认。',hotel:'hilo-hawaiian',checkout:'halepuna',transport:'HNL 还车 · ITO 取车 · 团车',route:['HNL','ITO','Hilo Hawaiian Hotel','Suisan','观星团'],tags:['岛间飞行','日落观星'],
+      meals:{breakfast:'退房前或机场简餐',lunch:'Suisan · poke',dinner:'视观星团是否含餐安排'},todo:['确认 HNL → ITO 航班及早上还车衔接','确定 ITO 取车、KOA 异地还车订单','补充 Hilo Hawaiian Hotel 房型、取消条款与行李寄存安排','向观星团确认 Hilo Hawaiian Hotel 的接送或集合地点、时间、含餐及结束时间'],
       events:[
         {time:'早上',type:'交通',title:'退房，去 HNL 还车',text:'带齐行李，先还租车，再前往航站楼。',place:'Daniel K Inouye International Airport Honolulu',notes:['须按租车接驳、航空公司要求和最终航班倒推酒店出发时间。']},
         {time:'09:31 → 10:28',type:'交通',title:'欧胡 → Hilo',text:'岛间航班候选时段，两端都用夏威夷时间。',flight:1,notes:['具体航司、航班号与时刻待确认。']},
-        {time:'抵达后',type:'住宿',title:'ITO 取车，去酒店寄存行李',text:'Grand Naniloa 暂定；到达较早，先按寄存行李安排。',place:'Grand Naniloa Hotel Hilo Hawaii',notes:['岛上用车从 ITO 取、KOA 还，预订时选择异地还车。','酒店入住与接团集合位置待确认。']},
-        {time:'午餐',type:'餐饮',title:'Suisan，来一碗 poke',text:'先吃午饭，再回酒店等观星团接送。',place:'Suisan Fish Market Hilo',notes:['核对当天营业和团方接送时间，若冲突就改简餐。']},
-        {time:'下午 → 晚间 · 接送时间待定',type:'体验',title:'云海、日落，然后满天星星',text:'计划参加观星团，从 Grand Naniloa 接送。路线与观景地点以所选团为准。',notes:['具体运营商、接送时间、结束时间与是否含晚餐都未确定。','集合前回酒店等候，不自行开租车追赶团车。','装备、海拔与参加要求按团方说明核对。']}
+        {time:'抵达后',type:'住宿',title:'ITO 取车，前往酒店',text:'Hilo Hawaiian Hotel 已预订，12/28–12/30，共 2 晚。提前抵达时的行李寄存安排待向酒店确认。',hotel:'hilo-hawaiian',place:'Hilo Hawaiian Hotel Trademark Collection by Wyndham Hilo Hawaii',notes:['岛上用车从 ITO 取、KOA 还，预订时选择异地还车。','入住及退房时间均为夏威夷当地时间。预订注明免费自行停车和免费 Wi-Fi。','酒店房型、取消条款和观星团接送或集合地点待补充或确认。']},
+        {time:'午餐',type:'餐饮',title:'Suisan，来一碗 poke',text:'先吃午饭，再按团方确认的地点和时间集合。',place:'Suisan Fish Market Hilo',notes:['核对当天营业和团方集合时间，若冲突就改简餐。']},
+        {time:'下午 → 晚间 · 接送时间待定',type:'体验',title:'云海、日落，然后满天星星',text:'计划参加观星团。能否到 Hilo Hawaiian Hotel 接送、具体集合地点与时间须由团方确认。路线与观景地点以所选团为准。',notes:['具体运营商、接送或集合时间、结束时间与是否含晚餐都未确定。','按团方确认的地点集合，不自行开租车追赶团车。','装备、海拔与参加要求按团方说明核对。']}
       ]
     },
     {
-      date:'2026-12-29',area:'Hilo',region:'hilo',title:'走进火山留下的风景',english:'A day on another planet.',intro:'火山口、熔岩隧道、一路开向海岸。给火山国家公园留出完整一天。',hotel:'naniloa',transport:'全天自驾 · Hilo 往返',route:['Hilo','火山口','Nāhuku','Chain of Craters','Hilo'],tags:['火山国家公园','熔岩海岸'],
+      date:'2026-12-29',area:'Hilo',region:'hilo',title:'走进火山留下的风景',english:'A day on another planet.',intro:'火山口、熔岩隧道、一路开向海岸。给火山国家公园留出完整一天。',hotel:'hilo-hawaiian',transport:'全天自驾 · Hilo 往返',route:['Hilo','火山口','Nāhuku','Chain of Craters','Hilo'],tags:['火山国家公园','熔岩海岸'],
       meals:{breakfast:'酒店或 Hilo 简餐',lunch:'简餐／野餐，提前准备',dinner:'Pineapples · Hilo'},todo:['出发前核对国家公园道路与步道开放状态','核对 Nāhuku 开放情况并准备午餐','核对 Pineapples 营业与用餐安排'],
       events:[
         {time:'约 08:00',type:'交通',title:'吃完早餐，从 Hilo 出发',text:'带上午餐、水和当天用品，今天以火山国家公园为主。',notes:['路况、天气与园区公告决定当天的实际路线。']},
@@ -98,7 +98,7 @@ window.TRIP = {
       ]
     },
     {
-      date:'2026-12-30',area:'Hilo → Kona',region:'kona',title:'骑过牧场，慢慢去西岸',english:'Through the green highlands.',intro:'带上行李离开 Hilo。骑马之后经过 Honokaʻa 和 Waimea，傍晚在西岸安顿。',hotel:'kona',checkout:'naniloa',transport:'自驾换酒店 · 行李随车',route:['Hilo','骑马','Honokaʻa','Waipiʻo 观景台','Waimea','Kona'],tags:['骑马','高地牧场','换酒店'],
+      date:'2026-12-30',area:'Hilo → Kona',region:'kona',title:'骑过牧场，慢慢去西岸',english:'Through the green highlands.',intro:'带上行李离开 Hilo。骑马之后经过 Honokaʻa 和 Waimea，傍晚在西岸安顿。',hotel:'kona',checkout:'hilo-hawaiian',transport:'自驾换酒店 · 行李随车',route:['Hilo','骑马','Honokaʻa','Waipiʻo 观景台','Waimea','Kona'],tags:['骑马','高地牧场','换酒店'],
       meals:{breakfast:'出发前简单吃',lunch:'Honokaʻa 午餐',dinner:'西岸酒店附近'},todo:['确定骑马运营商、地址、场次与参加要求','按骑马场实际地址核对早上车程','确定 Kona 酒店与入住时间','核对 Waipiʻo 观景台开放及停车安排'],
       events:[
         {time:'07:30',type:'交通',title:'退房，带全部行李出发',text:'今天不再回 Hilo，朝大岛西岸移动。',notes:['行李全部随车；停车时将物品收好，避免外露。','7:30 是目前的出发目标，须按骑马场地址重新核对。']},
