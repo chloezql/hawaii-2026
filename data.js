@@ -1,11 +1,12 @@
-/* 行程来源：ChatGPT「制定夏威夷行程」2026/11/16 最新完整排班表。
-   所有时间与商家安排均为规划，未重新核验营业时间或视为已预订。 */
+/* 行程来源：2026/11/16 完整排班表；往返航班依据用户提供的订票截图更新。
+   仅 confirmed 标记的项目已预订。截图未显示的航班号与到达时间不作推断。
+   公开数据不包含姓名、订单号、航空公司确认号或原始截图。 */
 window.TRIP = {
-  updated: '2026-11-16',
+  updated: '2026-11-19',
   flights: [
-    {date:'2026-12-23',name:'飞往欧胡',airline:'United · 候选',from:'SFO',to:'HNL',depart:'09:30',arrive:'13:13',depZone:'旧金山 PST',arrZone:'檀香山 HST',note:'航班号、票价、行李与最终时刻待确认。抵达后打车去 Waikiki。'},
+    {date:'2026-12-23',name:'飞往欧胡',airline:'Alaska Airlines',confirmed:true,cabin:'经济舱',from:'SFO',to:'HNL',depart:'07:20',arrive:null,depZone:'旧金山 PST',arrZone:'檀香山 HST',note:'已预订经济舱。航班号、到达时间、航站楼与行李额度待补充。抵达后打车去 Waikiki。'},
     {date:'2026-12-28',name:'欧胡 → 大岛',airline:'岛间航班 · 航司待定',from:'HNL',to:'ITO',depart:'09:31',arrive:'10:28',depZone:'檀香山 HST',arrZone:'Hilo HST',note:'候选时段。先在 HNL 还车，到 ITO 后另取租车。须与观星团接送衔接。'},
-    {date:'2027-01-01',name:'回到旧金山',airline:'Alaska · 候选',from:'KOA',to:'SFO',depart:'16:53',arrive:'23:59',depZone:'Kona HST',arrZone:'旧金山 PST',note:'候选时段。目标 14:00 左右还车，再接驳去航站楼。到达日期仍为 1/1。'}
+    {date:'2027-01-01',name:'回到旧金山',airline:'Alaska Airlines',confirmed:true,cabin:'经济舱',from:'KOA',to:'SFO',depart:'16:53',arrive:null,depZone:'Kona HST',arrZone:'旧金山 PST',note:'已预订经济舱。航班号、到达时间、航站楼与行李额度待补充。暂按 14:00 左右还车，再接驳去航站楼。'}
   ],
   hotels: [
     {id:'halepuna',name:'Halepuna Waikiki',area:'Waikiki · 欧胡',in:'2026-12-23',out:'2026-12-28',nights:5,query:'Halepuna Waikiki by Halekulani Honolulu',note:'暂定住宿。23–26 日步行、打车与接送；27 日取车，停车安排待确认。'},
@@ -20,9 +21,9 @@ window.TRIP = {
     {
       date:'2026-12-23',area:'欧胡',region:'oahu',title:'落地，切换海岛时间',english:'Hello, island time.',intro:'第一天留给海风。到 Waikiki 安顿下来，散步，吃一顿海鲜。',hotel:'halepuna',transport:'机场打车 · Waikiki 步行',route:['SFO','HNL','Waikiki','福缘'],tags:['抵达日','海边散步'],
       meals:{breakfast:'出发前或机上安排',lunch:'落地后随胃口简单吃',dinner:'福缘 Fook Yuen · 海鲜'},
-      todo:['确定 SFO → HNL 航班与行李额度','确认 Halepuna 住宿与入住安排','核对福缘营业时间并决定是否订位'],
+      todo:['补充去程航班号、到达时间与行李额度','确认 Halepuna 住宿与入住安排','核对福缘营业时间并决定是否订位'],
       events:[
-        {time:'09:30 → 13:13',type:'交通',title:'从旧金山飞往檀香山',text:'候选 United 直飞。出发是旧金山时间，到达是夏威夷时间。',flight:0,notes:['机票尚未确认，具体航班号待补充。','抵达后取行李、打车前往 Waikiki；不在机场取租车。']},
+        {time:'07:20 起飞',type:'交通',title:'从旧金山飞往檀香山',text:'Alaska Airlines 经济舱已预订。07:20 从 SFO 起飞，使用旧金山当地时间。',flight:0,notes:['到达时间和航班号尚未提供，补充后再细化当天安排。','抵达后取行李、打车前往 Waikiki；不在机场取租车。']},
         {time:'抵达后',type:'住宿',title:'在 Waikiki 安顿下来',text:'Halepuna 暂定。先入住或寄存行李，让第一天下午慢一点。',place:'Halepuna Waikiki by Halekulani',notes:['房型、入住时间、行李寄存方式等预订后补充。']},
         {time:'下午',type:'散步',title:'Waikiki，先去看海',text:'在酒店附近和海边随意走走，不安排需要赶时间的项目。',place:'Waikiki Beach Honolulu',notes:['按落地状态决定散步长度，累了就回酒店休息。']},
         {time:'晚餐',type:'餐饮',title:'福缘 · Fook Yuen',text:'用一顿海鲜开启假期。龙虾或其他海鲜，搭配青菜和面饭。',place:'Fook Yuen Seafood Restaurant Honolulu',notes:['海鲜先问时价，再按食量点菜。','营业、菜单与订位仍待确认。']}
@@ -121,13 +122,13 @@ window.TRIP = {
     },
     {
       date:'2027-01-01',area:'Kona',region:'kona',title:'新年第一天，把海风带回家',english:'Until the next island.',intro:'最后半天不赶路。海滨散步、Umekes 午饭，再去机场还车回家。',hotel:null,checkout:'kona',transport:'自驾 · KOA 还车 · 飞 SFO',route:['Kona 海滨','Umekes','KOA','SFO'],tags:['新年','返程日'],
-      meals:{breakfast:'酒店或附近早餐',lunch:'11:00 Umekes',dinner:'机场或机上安排'},todo:['确认回程航班、行李和还车时间','核对 Umekes 元旦营业','按最终酒店位置调整上午路线'],
+      meals:{breakfast:'酒店或附近早餐',lunch:'11:00 Umekes',dinner:'机场或机上安排'},todo:['补充回程航班号、到达时间与行李额度，确认还车时间','核对 Umekes 元旦营业','按最终酒店位置调整上午路线'],
       events:[
         {time:'早餐后',type:'住宿',title:'退房，再看一会儿海',text:'行李装好，去 Kona 海滨散步，最后半天留得轻松一些。',place:'Kailua Kona Waterfront Hawaii',notes:['此安排基于住 Kona 镇附近。','如果住 Hilton Waikoloa Village，上午改为 A-Bay／度假区附近活动，不往镇上折返。']},
         {time:'11:00',type:'餐饮',title:'Umekes，新年第一顿午饭',text:'候选午餐，元旦营业和到店时间待确认。',place:'Umekes Fish Market Bar and Grill Kailua Kona',notes:['若最终住 Waikoloa，需连同机场路线一起重新安排，不能为这顿饭折返赶路。']},
         {time:'午后',type:'交通',title:'短停、加油，往机场走',text:'不再安排新的大项目，给还车和接驳留出余量。',notes:['加油要求、还车位置与接驳方式按租车订单确认。']},
         {time:'约 14:00',type:'交通',title:'KOA 还车，前往航站楼',text:'目标 14 点左右还车，再接驳去机场办理值机。',place:'Kona International Airport Hawaii',notes:['按最终航班、租车还车及航空公司要求核对时间。']},
-        {time:'16:53 → 23:59',type:'交通',title:'Kona → 旧金山',text:'候选 Alaska 返程。起飞用 HST，落地用 PST，仍在 1/1 抵达。',flight:2,notes:['机票、航班号及最终时刻未确认。']}
+        {time:'16:53 起飞',type:'交通',title:'Kona → 旧金山',text:'Alaska Airlines 经济舱已预订。16:53 从 KOA 起飞，使用夏威夷当地时间。',flight:2,notes:['航班号、到达时间、航站楼与行李额度待补充。']}
       ]
     }
   ]
