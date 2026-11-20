@@ -1,6 +1,6 @@
-/* 行程来源：2026/11/16 完整排班表；往返航班依据用户提供的订票截图更新。
+/* 行程来源：2026/11/16 完整排班表；往返航班及欧胡酒店依据用户提供的预订截图更新。
    仅 confirmed 标记的项目已预订。截图未显示的航班号与到达时间不作推断。
-   公开数据不包含姓名、订单号、航空公司确认号或原始截图。 */
+   公开数据不包含姓名、订单号、预订确认号或原始截图。 */
 window.TRIP = {
   updated: '2026-11-19',
   flights: [
@@ -9,7 +9,7 @@ window.TRIP = {
     {date:'2027-01-01',name:'回到旧金山',airline:'Alaska Airlines',confirmed:true,cabin:'经济舱',from:'KOA',to:'SFO',depart:'16:53',arrive:null,depZone:'Kona HST',arrZone:'旧金山 PST',note:'已预订经济舱。航班号、到达时间、航站楼与行李额度待补充。暂按 14:00 左右还车，再接驳去航站楼。'}
   ],
   hotels: [
-    {id:'halepuna',name:'Halepuna Waikiki',area:'Waikiki · 欧胡',in:'2026-12-23',out:'2026-12-28',nights:5,query:'Halepuna Waikiki by Halekulani Honolulu',note:'暂定住宿。23–26 日步行、打车与接送；27 日取车，停车安排待确认。'},
+    {id:'halepuna',name:'Halepuna Waikiki by Halekulani',confirmed:true,area:'Waikiki · 欧胡',in:'2026-12-23',out:'2026-12-28',nights:5,checkin:'15:00',checkout:'12:00',address:'2233 Helumoa Road, Honolulu, HI 96815',phone:'+1 808-921-7272',query:'Halepuna Waikiki by Halekulani 2233 Helumoa Road Honolulu HI 96815',note:'本次预订注明无度假村费。若入住当天 21:00 后抵达，须直接联系酒店，以免预订被取消。27 日停车安排待确认。'},
     {id:'naniloa',name:'Grand Naniloa',area:'Hilo · 大岛东岸',in:'2026-12-28',out:'2026-12-30',nights:2,query:'Grand Naniloa Hotel Hilo Hawaii',note:'暂定住宿。28 日先寄存行李，观星团拟从这里接送，须以团方确认为准。'},
     {id:'kona',name:'Kona 酒店待选',area:'Kailua-Kona · 大岛西岸',in:'2026-12-30',out:'2027-01-01',nights:2,query:null,note:'当前按住 Kailua-Kona 镇附近排。若改住 Waikoloa，1/1 上午改在 A-Bay／度假区活动，避免折返。'}
   ],
@@ -21,10 +21,10 @@ window.TRIP = {
     {
       date:'2026-12-23',area:'欧胡',region:'oahu',title:'落地，切换海岛时间',english:'Hello, island time.',intro:'第一天留给海风。到 Waikiki 安顿下来，散步，吃一顿海鲜。',hotel:'halepuna',transport:'机场打车 · Waikiki 步行',route:['SFO','HNL','Waikiki','福缘'],tags:['抵达日','海边散步'],
       meals:{breakfast:'出发前或机上安排',lunch:'落地后随胃口简单吃',dinner:'福缘 Fook Yuen · 海鲜'},
-      todo:['补充去程航班号、到达时间与行李额度','确认 Halepuna 住宿与入住安排','核对福缘营业时间并决定是否订位'],
+      todo:['补充去程航班号、到达时间与行李额度','补充 Halepuna 房型、取消条款与行李寄存安排','核对福缘营业时间并决定是否订位'],
       events:[
         {time:'07:20 起飞',type:'交通',title:'从旧金山飞往檀香山',text:'Alaska Airlines 经济舱已预订。07:20 从 SFO 起飞，使用旧金山当地时间。',flight:0,notes:['到达时间和航班号尚未提供，补充后再细化当天安排。','抵达后取行李、打车前往 Waikiki；不在机场取租车。']},
-        {time:'抵达后',type:'住宿',title:'在 Waikiki 安顿下来',text:'Halepuna 暂定。先入住或寄存行李，让第一天下午慢一点。',place:'Halepuna Waikiki by Halekulani',notes:['房型、入住时间、行李寄存方式等预订后补充。']},
+        {time:'抵达后',type:'住宿',title:'在 Waikiki 安顿下来',text:'Halepuna Waikiki by Halekulani 已预订，12/23–12/28，共住 5 晚。',hotel:'halepuna',place:'Halepuna Waikiki by Halekulani 2233 Helumoa Road Honolulu HI 96815',notes:['入住及退房时间均为夏威夷当地时间。房型、取消条款和提早抵达时的行李寄存安排待补充。','本次预订注明无度假村费。','若入住当天 21:00 后抵达，须直接联系酒店，以免预订被取消。']},
         {time:'下午',type:'散步',title:'Waikiki，先去看海',text:'在酒店附近和海边随意走走，不安排需要赶时间的项目。',place:'Waikiki Beach Honolulu',notes:['按落地状态决定散步长度，累了就回酒店休息。']},
         {time:'晚餐',type:'餐饮',title:'福缘 · Fook Yuen',text:'用一顿海鲜开启假期。龙虾或其他海鲜，搭配青菜和面饭。',place:'Fook Yuen Seafood Restaurant Honolulu',notes:['海鲜先问时价，再按食量点菜。','营业、菜单与订位仍待确认。']}
       ]
