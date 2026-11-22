@@ -1,11 +1,11 @@
-/* 行程来源：2026/11/16 完整排班表；往返航班、欧胡及 Hilo 酒店依据用户提供的预订截图更新。
+/* 行程来源：2026/11/16 完整排班表；三段航班、欧胡及 Hilo 酒店依据用户提供的预订截图更新。
    仅 confirmed 标记的项目已预订。截图未显示的航班号与到达时间不作推断。
    公开数据不包含姓名、订单号、预订确认号或原始截图。 */
 window.TRIP = {
-  updated: '2026-11-19',
+  updated: '2026-11-22',
   flights: [
     {date:'2026-12-23',name:'飞往欧胡',airline:'Alaska Airlines',confirmed:true,cabin:'经济舱',from:'SFO',to:'HNL',depart:'07:20',arrive:null,depZone:'旧金山 PST',arrZone:'檀香山 HST',note:'已预订经济舱。航班号、到达时间、航站楼与行李额度待补充。抵达后打车去 Waikiki。'},
-    {date:'2026-12-28',name:'欧胡 → 大岛',airline:'岛间航班 · 航司待定',from:'HNL',to:'ITO',depart:'09:31',arrive:'10:28',depZone:'檀香山 HST',arrZone:'Hilo HST',note:'候选时段。先在 HNL 还车，到 ITO 后另取租车。须与观星团接送衔接。'},
+    {date:'2026-12-28',name:'欧胡 → 大岛',airline:'Alaska Airlines',confirmed:true,cabin:'经济舱',from:'HNL',to:'ITO',depart:'09:31',arrive:null,depZone:'檀香山 HST',arrZone:'Hilo HST',note:'已预订经济舱，09:31 从 HNL 起飞。航班号、到达时间、航站楼与行李额度待补充。先在 HNL 还车，到 ITO 后另取租车，并与观星团集合安排衔接。'},
     {date:'2027-01-01',name:'回到旧金山',airline:'Alaska Airlines',confirmed:true,cabin:'经济舱',from:'KOA',to:'SFO',depart:'16:53',arrive:null,depZone:'Kona HST',arrZone:'旧金山 PST',note:'已预订经济舱。航班号、到达时间、航站楼与行李额度待补充。暂按 14:00 左右还车，再接驳去航站楼。'}
   ],
   hotels: [
@@ -76,10 +76,10 @@ window.TRIP = {
     },
     {
       date:'2026-12-28',area:'Hilo',region:'hilo',title:'换一座岛，去云海上等日落',english:'From ocean blue to starlight.',intro:'上午飞到大岛东岸，下午交给观星团。接送或集合地点待团方确认。',hotel:'hilo-hawaiian',checkout:'halepuna',transport:'HNL 还车 · ITO 取车 · 团车',route:['HNL','ITO','Hilo Hawaiian Hotel','Suisan','观星团'],tags:['岛间飞行','日落观星'],
-      meals:{breakfast:'退房前或机场简餐',lunch:'Suisan · poke',dinner:'视观星团是否含餐安排'},todo:['确认 HNL → ITO 航班及早上还车衔接','确定 ITO 取车、KOA 异地还车订单','补充 Hilo Hawaiian Hotel 房型、取消条款与行李寄存安排','向观星团确认 Hilo Hawaiian Hotel 的接送或集合地点、时间、含餐及结束时间'],
+      meals:{breakfast:'退房前或机场简餐',lunch:'Suisan · poke',dinner:'视观星团是否含餐安排'},todo:['补充岛间航班号、到达时间与行李额度，核对早上还车衔接','确定 ITO 取车、KOA 异地还车订单','补充 Hilo Hawaiian Hotel 房型、取消条款与行李寄存安排','向观星团确认 Hilo Hawaiian Hotel 的接送或集合地点、时间、含餐及结束时间'],
       events:[
         {time:'早上',type:'交通',title:'退房，去 HNL 还车',text:'带齐行李，先还租车，再前往航站楼。',place:'Daniel K Inouye International Airport Honolulu',notes:['须按租车接驳、航空公司要求和最终航班倒推酒店出发时间。']},
-        {time:'09:31 → 10:28',type:'交通',title:'欧胡 → Hilo',text:'岛间航班候选时段，两端都用夏威夷时间。',flight:1,notes:['具体航司、航班号与时刻待确认。']},
+        {time:'09:31 起飞',type:'交通',title:'欧胡 → Hilo',text:'Alaska Airlines 经济舱已预订。09:31 从 HNL 起飞，两端均使用夏威夷当地时间。',flight:1,notes:['航班号、到达时间、航站楼与行李额度待补充。','按 09:31 起飞时间核对酒店退房、HNL 还车与接驳安排，并向观星团确认集合衔接。']},
         {time:'抵达后',type:'住宿',title:'ITO 取车，前往酒店',text:'Hilo Hawaiian Hotel 已预订，12/28–12/30，共 2 晚。提前抵达时的行李寄存安排待向酒店确认。',hotel:'hilo-hawaiian',place:'Hilo Hawaiian Hotel Trademark Collection by Wyndham Hilo Hawaii',notes:['岛上用车从 ITO 取、KOA 还，预订时选择异地还车。','入住及退房时间均为夏威夷当地时间。预订注明免费自行停车和免费 Wi-Fi。','酒店房型、取消条款和观星团接送或集合地点待补充或确认。']},
         {time:'午餐',type:'餐饮',title:'Suisan，来一碗 poke',text:'先吃午饭，再按团方确认的地点和时间集合。',place:'Suisan Fish Market Hilo',notes:['核对当天营业和团方集合时间，若冲突就改简餐。']},
         {time:'下午 → 晚间 · 接送时间待定',type:'体验',title:'云海、日落，然后满天星星',text:'计划参加观星团。能否到 Hilo Hawaiian Hotel 接送、具体集合地点与时间须由团方确认。路线与观景地点以所选团为准。',notes:['具体运营商、接送或集合时间、结束时间与是否含晚餐都未确定。','按团方确认的地点集合，不自行开租车追赶团车。','装备、海拔与参加要求按团方说明核对。']}
