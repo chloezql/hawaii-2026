@@ -1,10 +1,10 @@
 /* 行程来源：2026/11/16 完整排班表；三段航班和三家酒店依据用户提供的预订截图更新。
-   仅 confirmed 标记的项目已预订。截图未显示的航班号与到达时间不作推断。
+   仅 confirmed 标记的项目已预订。补充的公开航班时刻注明来源，与订单确认信息区分。
    公开数据不包含姓名、订单号、预订确认号或原始截图。 */
 window.TRIP = {
   updated: '2026-11-22',
   flights: [
-    {date:'2026-12-23',name:'飞往欧胡',airline:'Alaska Airlines',confirmed:true,cabin:'经济舱',from:'SFO',to:'HNL',depart:'07:20',arrive:null,depZone:'旧金山 PST',arrZone:'檀香山 HST',note:'已预订经济舱。航班号、到达时间、航站楼与行李额度待补充。抵达后打车去 Waikiki。'},
+    {date:'2026-12-23',name:'飞往欧胡',airline:'Alaska Airlines',confirmed:true,cabin:'经济舱',from:'SFO',to:'HNL',depart:'07:20',arrive:'11:10',depZone:'旧金山 PST',arrZone:'檀香山 HST',scheduleSource:'https://public.alaskacargo.com/getmedia/e35baf10-59a4-4cd6-90a0-eda1ce157f62/cargoschedule-202612-all#page=10',note:'按 12/23 航线与 07:20 起飞时间匹配 AS811；11:10 计划抵达，飞行 5 小时 50 分。到达时刻来自 Alaska 官方 12 月时刻表（11/10 版本），以航司后续更新为准。航班号尚未与完整订单核对；行李额度按订单确认。'},
     {date:'2026-12-28',name:'欧胡 → 大岛',airline:'Alaska Airlines',confirmed:true,cabin:'经济舱',from:'HNL',to:'ITO',depart:'09:31',arrive:null,depZone:'檀香山 HST',arrZone:'Hilo HST',note:'已预订经济舱，09:31 从 HNL 起飞。航班号、到达时间、航站楼与行李额度待补充。先在 HNL 还车，到 ITO 后另取租车，并与观星团集合安排衔接。'},
     {date:'2027-01-01',name:'回到旧金山',airline:'Alaska Airlines',confirmed:true,cabin:'经济舱',from:'KOA',to:'SFO',depart:'16:53',arrive:null,depZone:'Kona HST',arrZone:'旧金山 PST',note:'已预订经济舱。航班号、到达时间、航站楼与行李额度待补充。暂按 14:00 左右还车，再接驳去航站楼。'}
   ],
@@ -19,14 +19,17 @@ window.TRIP = {
   ],
   days: [
     {
-      date:'2026-12-23',area:'欧胡',region:'oahu',title:'落地，切换海岛时间',english:'Hello, island time.',intro:'第一天留给海风。到 Waikiki 安顿下来，散步，吃一顿海鲜。',hotel:'halepuna',transport:'机场打车 · Waikiki 步行',route:['SFO','HNL','Waikiki','福缘'],tags:['抵达日','海边散步'],
-      meals:{breakfast:'出发前或机上安排',lunch:'落地后随胃口简单吃',dinner:'福缘 Fook Yuen · 海鲜'},
-      todo:['补充去程航班号、到达时间与行李额度','补充 Halepuna 房型、取消条款与行李寄存安排','核对福缘营业时间并决定是否订位'],
+      date:'2026-12-23',area:'欧胡',region:'oahu',title:'落地，切换海岛时间',english:'Hello, island time.',intro:'11:10 计划抵达，先去酒店寄存行李，13 点左右吃银座梅林，15 点后入住休息。',hotel:'halepuna',transport:'HNL 打车到 Halepuna · Waikiki 步行；落地后均为夏威夷时间',route:['SFO','HNL','Halepuna 寄存','银座梅林','Waikiki','Halepuna 入住','福缘'],tags:['抵达日','海边散步'],
+      meals:{breakfast:'出发前或机上安排',lunch:'目标 13:00 银座梅林 · 未订位，迟到或久候则改附近简餐',dinner:'目标 18:30 福缘 Fook Yuen · 海鲜，未订位'},
+      todo:['将公开时刻表匹配的 AS811 与完整订单核对，确认行李额度','确认 Halepuna 提前寄存行李，补充房型与取消条款','决定是否订银座梅林 13:00；若 walk-in，接受排队或改餐厅','核对福缘营业时间并决定是否订位'],
       events:[
-        {time:'07:20 起飞',type:'交通',title:'从旧金山飞往檀香山',text:'Alaska Airlines 经济舱已预订。07:20 从 SFO 起飞，使用旧金山当地时间。',flight:0,notes:['到达时间和航班号尚未提供，补充后再细化当天安排。','抵达后取行李、打车前往 Waikiki；不在机场取租车。']},
-        {time:'抵达后',type:'住宿',title:'在 Waikiki 安顿下来',text:'Halepuna Waikiki by Halekulani 已预订，12/23–12/28，共住 5 晚。',hotel:'halepuna',place:'Halepuna Waikiki by Halekulani 2233 Helumoa Road Honolulu HI 96815',notes:['入住及退房时间均为夏威夷当地时间。房型、取消条款和提早抵达时的行李寄存安排待补充。','本次预订注明无度假村费。','若入住当天 21:00 后抵达，须直接联系酒店，以免预订被取消。']},
-        {time:'下午',type:'散步',title:'Waikiki，先去看海',text:'在酒店附近和海边随意走走，不安排需要赶时间的项目。',place:'Waikiki Beach Honolulu',notes:['按落地状态决定散步长度，累了就回酒店休息。']},
-        {time:'晚餐',type:'餐饮',title:'福缘 · Fook Yuen',text:'用一顿海鲜开启假期。龙虾或其他海鲜，搭配青菜和面饭。',place:'Fook Yuen Seafood Restaurant Honolulu',notes:['海鲜先问时价，再按食量点菜。','营业、菜单与订位仍待确认。']}
+        {time:'07:20 PST',type:'交通',title:'飞往檀香山 · 11:10 HST 抵达',text:'07:20 旧金山时间出发，11:10 夏威夷时间计划抵达。飞行 5 小时 50 分，夏威夷比旧金山慢 2 小时。',flight:0,notes:['起飞时间来自订单；到达时间来自按日期、航线和起飞时间匹配的 AS811 官方时刻表。','下面按正常抵达安排，交通与等候时间是规划预留。若延误，先缩短散步，并按午餐截止方案调整。']},
+        {time:'11:10–12:00',type:'交通',title:'下机、取行李，走到乘车点',text:'预留约 50 分钟办理抵达后的事项，目标 12 点左右出发去酒店。',place:'Daniel K Inouye International Airport Honolulu',notes:['这是下机、行李提取和找车的时间预算，实际按当天情况调整。','SFO → HNL 为美国国内航班；当天不取租车。']},
+        {time:'12:00–12:45',type:'交通',title:'打车到 Halepuna，先寄存行李',text:'从 HNL 直接去 Halepuna Waikiki by Halekulani，预留约 45 分钟乘车及寄存。',place:'Halepuna Waikiki by Halekulani 2233 Helumoa Road Honolulu HI 96815',notes:['45 分钟是交通与办理寄存的合计预算，车程随路况变化。','提前向酒店确认行李寄存；不要把中午到店当成已获准提前入住。','若 13:15 后才准备好离开酒店，午餐改附近简餐，不赶银座梅林。']},
+        {time:'约 13:00',type:'餐饮',title:'银座梅林 · Ginza Bairin 午餐',text:'寄存后步行到 255 Beach Walk。目标 13 点用餐，安排炸猪排午饭；目前未订位。',place:'Ginza Bairin 255 Beach Walk Honolulu HI 96815',notes:['官网午餐每日 11:00–14:00，最后入座 14:00；这不代表到店一定有座位。','如果这顿一定要吃，优先查看 Yelp 的 13:00 订位；若选 walk-in，到店先问预计入座时间。','若预计要等超过 30 分钟，或无法在 14:00 前入座，就改附近简餐。30 分钟是我们设定的等待上限，并非餐厅预计排队时间。','航班明显延误时，及时调整已有订位；不把午餐设成必须赶到的项目。']},
+        {time:'约 14:00',type:'散步',title:'Waikiki 海边，轻松走一会儿',text:'午饭后在酒店附近和海边随意走走，15 点回酒店。',place:'Waikiki Beach Honolulu',notes:['这段作为可压缩的缓冲。午饭较晚或累了，就先回酒店休息。']},
+        {time:'15:00 后',type:'住宿',title:'Halepuna 入住，洗澡休息',text:'12/23–12/28 五晚已预订。15:00 后办理入住，下午留给休息。',hotel:'halepuna',place:'Halepuna Waikiki by Halekulani 2233 Helumoa Road Honolulu HI 96815',notes:['入住时间为夏威夷当地时间，提前入住取决于酒店当天房态。','本次预订注明无度假村费；房型与取消条款待补充。','若行程变化至 21:00 后才抵达，须直接联系酒店。']},
+        {time:'约 18:30',type:'餐饮',title:'福缘 · Fook Yuen 晚餐',text:'休息好再出门吃海鲜，龙虾或其他海鲜搭配青菜和面饭。',place:'Fook Yuen Seafood Restaurant Honolulu',notes:['18:30 为用餐目标，营业、菜单与订位仍待确认。','海鲜先问时价，再按食量点菜。']}
       ]
     },
     {

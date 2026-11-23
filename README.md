@@ -2,7 +2,7 @@
 
 2026/12/23—2027/1/1，欧胡 5 晚 + Hilo 2 晚 + Kona 2 晚的中文旅行手册。
 
-手机优先，纯静态网站，无需安装依赖或构建。行程依据 ChatGPT「制定夏威夷行程」2026/11/16 最新完整排班表整理；往返及 12/28 HNL → ITO 岛间航班的 Alaska Airlines 经济舱机票均已按用户提供的订票信息确认；欧胡 Halepuna Waikiki by Halekulani 的 12/23–12/28 五晚住宿已按预订信息确认，15:00 后入住、12:00 前退房，无度假村费。Hilo Hawaiian Hotel（Trademark Collection by Wyndham）12/28–12/30 两晚住宿也已确认，15:00 入住、12:00 前退房，预订注明免费自行停车及免费 Wi-Fi。观星团接送或集合地点须按新酒店重新确认。Kona Coast Resort 的 12/30–1/1 两晚住宿已确认，房型为 One bedroom Villa Honu（一卧室别墅），16:00 后入住、10:00 前退房，预订注明免费自行停车和免费 Wi-Fi。三段航班与九晚住宿均已确认；租车、活动与餐厅仍待确认。地址和酒店电话参考[酒店官网](https://www.shellvacationsclub.com/club/resorts/kona_coast/index.page)。未提供的航班号和到达时间标为待补充。营业时间、节日班表及开放情况尚需核实。
+手机优先，纯静态网站，无需安装依赖或构建。行程依据 ChatGPT「制定夏威夷行程」2026/11/16 最新完整排班表整理；往返及 12/28 HNL → ITO 岛间航班的 Alaska Airlines 经济舱机票均已按用户提供的订票信息确认；欧胡 Halepuna Waikiki by Halekulani 的 12/23–12/28 五晚住宿已按预订信息确认，15:00 后入住、12:00 前退房，无度假村费。Hilo Hawaiian Hotel（Trademark Collection by Wyndham）12/28–12/30 两晚住宿也已确认，15:00 入住、12:00 前退房，预订注明免费自行停车及免费 Wi-Fi。观星团接送或集合地点须按新酒店重新确认。Kona Coast Resort 的 12/30–1/1 两晚住宿已确认，房型为 One bedroom Villa Honu（一卧室别墅），16:00 后入住、10:00 前退房，预订注明免费自行停车和免费 Wi-Fi。三段航班与九晚住宿均已确认；租车、活动与餐厅仍待确认。地址和酒店电话参考[酒店官网](https://www.shellvacationsclub.com/club/resorts/kona_coast/index.page)。12/23 去程按日期、航线与 07:20 起飞时间匹配 AS811，11:10 HST 计划抵达，来源为 [Alaska 官方 2026 年 12 月时刻表第 10 页](https://public.alaskacargo.com/getmedia/e35baf10-59a4-4cd6-90a0-eda1ce157f62/cargoschedule-202612-all#page=10)（11/10 版本），航班号尚未与完整订单核对。当天据此安排取行李、打车寄存、约 13:00 银座梅林午餐与 15:00 后入住；交通预算与候餐截止方案写在各站详情，餐厅尚未订位。其余未提供的航班号和到达时间继续标为待补充。营业时间、节日班表及开放情况尚需核实。
 
 ## 交互
 
