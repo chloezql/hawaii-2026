@@ -1,4 +1,4 @@
-/* 行程来源：2026/11/16 完整排班表；三段航班和三家酒店依据用户提供的预订截图更新。
+/* 行程来源：2026/11/16 完整排班表；航班、酒店和 12/24 PCC 依据用户提供的预订截图更新。
    仅 confirmed 标记的项目已预订。补充的公开航班时刻注明来源，与订单确认信息区分。
    公开数据不包含姓名、订单号、预订确认号或原始截图。 */
 window.TRIP = {
@@ -33,13 +33,16 @@ window.TRIP = {
       ]
     },
     {
-      date:'2026-12-24',area:'欧胡',region:'oahu',title:'把一整天交给波利尼西亚',english:'Stories of the Pacific.',intro:'今天只玩 PCC。文化村、晚餐和 HĀ 大秀，用往返接送串起来。',hotel:'halepuna',transport:'PCC 往返大巴接送',route:['Waikiki','PCC','Waikiki'],tags:['文化体验','接送省心'],
-      meals:{breakfast:'Island Vintage Coffee',lunch:'PCC 园内简餐',dinner:'PCC 套餐晚餐'},todo:['选择 PCC 套餐并确认 12/24 场次','确认大巴集合点、接送时间及返程','核对套餐含餐和 HĀ 大秀座位'],
+      date:'2026-12-24',area:'欧胡',region:'oahu',title:'把一整天交给波利尼西亚',english:'Stories of the Pacific.',intro:'PCC Aliʻi Lūʻau 与往返大巴已订。09:55 前在 Ross 集合，10:05 出发，16:30 到 Hale Ohana 吃晚餐。',hotel:'halepuna',bookingLabel:'PCC 及接送',transport:'已订 Motor Coach 往返 · Ross / Seaside Avenue · 09:55 前到场，10:05 发车；均为夏威夷时间',route:['早餐','Ross 集合','PCC 文化村','Hale Ohana 晚餐','HĀ 大秀','Waikiki'],tags:['文化体验','接送已订'],
+      meals:{breakfast:'目标 08:30–09:15 · Island Vintage Coffee',lunch:'PCC 园内简餐，另购；16:30 已有晚餐',dinner:'已订 16:30 Aliʻi Lūʻau · Hale Ohana'},todo:['保存电子票，核对 HĀ 大秀票券上的场次与具体座位','上车时向司机确认晚间返程集合点与发车时间'],
       events:[
-        {time:'早餐',type:'餐饮',title:'Island Vintage Coffee',text:'一份 açaí bowl，加一份咸口早餐，两个人分着吃。',place:'Island Vintage Coffee Royal Hawaiian Center',notes:['出发前吃好早餐，午饭在园内简单解决。']},
-        {time:'约 10:00',type:'交通',title:'坐上 PCC 接送大巴',text:'按预订后的指定地点集合，往返接送一起安排。',notes:['10 点为目前的规划时间，实际集合时间以 PCC 凭证为准。','集合地点待补；不要直接把酒店当作接客点。']},
-        {time:'中午 → 下午',type:'体验',title:'Polynesian Cultural Center',text:'文化村落、互动活动和表演，给这里留足一整天。',place:'Polynesian Cultural Center Laie Hawaii',notes:['入园及各活动时间在选定套餐后补充。','当天不叠加北岸或其他景点。']},
-        {time:'晚间',type:'体验',title:'套餐晚餐 + HĀ 大秀',text:'吃完套餐晚餐，留下来看晚间大秀，结束后坐大巴返回。',place:'Polynesian Cultural Center Laie Hawaii',notes:['餐食内容、晚餐时间和大秀座位以最终套餐为准。','回 Waikiki 的准确时间待团方确认。']}
+        {time:'08:30–09:15',type:'餐饮',title:'Island Vintage Coffee 早餐',text:'一份 açaí bowl，加一份咸口早餐，两个人分着吃。',place:'Island Vintage Coffee Royal Hawaiian Center',notes:['这是早餐时间预算，给前往 Ross 集合留好余量；队伍太长就改快餐。','午饭在 PCC 园内简单解决，16:30 已有套餐晚餐。']},
+        {time:'09:55 前',type:'交通',title:'Ross 店旁集合 · Seaside Avenue',text:'在 ROSS Dress for Less Waikiki 附近、Seaside Avenue 一侧的人行道等车，至少提前 10 分钟到场。',place:'ROSS Dress for Less 333 Seaside Avenue Honolulu HI 96815',notes:['集合点与提前到场要求来自已付款的接送凭证。','不是在 Halepuna 酒店门口接客；按 Seaside Avenue 一侧的人行道找车。','准备好电子票，上车时确认当晚回程的集合地点和发车时间。']},
+        {time:'10:05',type:'交通',title:'乘 PCC Motor Coach 出发',text:'两位成人的 Motor Coach 往返接送已付款，Ross 站 10:05 发车。',confirmed:true,notes:['已订标准往返接送，不含 Circle Island 环岛观光。','10:05 为凭证列明的发车时间，全部使用夏威夷当地时间。','下车后按司机指示报到；大巴实际到达时间随路况变化。']},
+        {time:'票面 11:45',type:'体验',title:'PCC 文化村 · 抵达后报到',text:'12/24 两位成人的 Islands of Polynesia 已订，票面列明 11:45 HST。抵达后先报到，再按现场班表逛文化村。',confirmed:true,place:'Polynesian Cultural Center Laie Hawaii',notes:['11:45 是票面列出的时间，不是大巴保证抵达的时刻；按接送安排前往，不自行倒推更早出发。','Aliʻi Lūʻau 套餐官网包含六个文化村的团体导览；报到后确认导览集合点和当天活动安排。','午餐另购，简单吃即可。16:30 到 Hale Ohana，不把下午活动排到晚餐时段。','准备电子确认函、有效照片证件及购票所用信用卡，按官方报到要求携带；这些资料不上传网站。']},
+        {time:'16:30',type:'餐饮',title:'Aliʻi Lūʻau 晚餐 · Hale Ohana',text:'12/24 两位成人已付款。票面场地为 Hale Ohana，16:30 到场入座，享用套餐自助晚餐与现场表演。',confirmed:true,place:'Hale Ohana Polynesian Cultural Center Laie Hawaii',notes:['日期、场地与 16:30 时间以预订截图为依据，均为夏威夷当地时间。','16:30 为入座时间；晚餐及节目按现场流程进行，不将它理解为另一个晚间大秀的开演时间。']},
+        {time:'19:15 · 官网参考',type:'体验',title:'HĀ: Breath of Life 大秀',text:'Aliʻi Lūʻau 套餐官网包含 HĀ 大秀及 Gold 区座位。官方参考场次为 19:15–20:35，具体以电子票与当天通知为准。',confirmed:true,place:'Pacific Theater Polynesian Cultural Center Laie Hawaii',notes:['套餐内容及参考时间已按 PCC 官方套餐页核对；截图没有展示大秀票券与具体排次座号，保存完整电子票后再核对。','按现场指示提前进场，散场后去司机确认的地点集合。']},
+        {time:'大秀结束后',type:'交通',title:'乘已订大巴回 Waikiki',text:'看完大秀后乘常规返程接送；官方预计约 22:30 回到 Waikiki，实际随散场和路况变化。',confirmed:true,notes:['凭证已确认往返接送，晚间具体发车时刻与集合点向司机核对。','不要乘 18:30 的 Early Return Shuttle，那班会早于晚间大秀离开。','回到 Waikiki 后步行回 Halepuna，不再安排其他项目。']}
       ]
     },
     {
