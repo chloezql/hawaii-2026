@@ -1,4 +1,4 @@
-/* 行程来源：2026/11/16 完整排班表；航班、酒店和 12/24 PCC 依据用户提供的预订截图更新。
+/* 行程来源：2026/11/16 完整排班表；航班、酒店和 PCC 依据预订截图更新，12/23 午餐依据用户订位确认更新。
    仅 confirmed 标记的项目已预订。补充的公开航班时刻注明来源，与订单确认信息区分。
    公开数据不包含姓名、订单号、预订确认号或原始截图。 */
 window.TRIP = {
@@ -19,14 +19,14 @@ window.TRIP = {
   ],
   days: [
     {
-      date:'2026-12-23',area:'欧胡',region:'oahu',title:'落地，切换海岛时间',english:'Hello, island time.',intro:'11:10 计划抵达，先去酒店寄存行李，13 点左右吃银座梅林，15 点后入住休息。',hotel:'halepuna',transport:'HNL 打车到 Halepuna · Waikiki 步行；落地后均为夏威夷时间',route:['SFO','HNL','Halepuna 寄存','银座梅林','Waikiki','Halepuna 入住','福缘'],tags:['抵达日','海边散步'],
-      meals:{breakfast:'出发前或机上安排',lunch:'目标 13:00 银座梅林 · 未订位，迟到或久候则改附近简餐',dinner:'目标 18:30 福缘 Fook Yuen · 海鲜，未订位'},
-      todo:['将公开时刻表匹配的 AS811 与完整订单核对，确认行李额度','确认 Halepuna 提前寄存行李，补充房型与取消条款','决定是否订银座梅林 13:00；若 walk-in，接受排队或改餐厅','核对福缘营业时间并决定是否订位'],
+      date:'2026-12-23',area:'欧胡',region:'oahu',title:'落地，切换海岛时间',english:'Hello, island time.',intro:'11:10 计划抵达，先去酒店寄存行李，银座梅林已订 13:00，15 点后入住休息。',hotel:'halepuna',bookingLabel:'午餐',transport:'HNL 打车到 Halepuna · Waikiki 步行；落地后均为夏威夷时间',route:['SFO','HNL','Halepuna 寄存','银座梅林','Waikiki','Halepuna 入住','福缘'],tags:['抵达日','海边散步'],
+      meals:{breakfast:'出发前或机上安排',lunch:'已订 13:00 银座梅林 · 炸猪排午餐',dinner:'目标 18:30 福缘 Fook Yuen · 海鲜，未订位'},
+      todo:['将公开时刻表匹配的 AS811 与完整订单核对，确认行李额度','确认 Halepuna 提前寄存行李，补充房型与取消条款','核对福缘营业时间并决定是否订位'],
       events:[
-        {time:'07:20 PST',type:'交通',title:'飞往檀香山 · 11:10 HST 抵达',text:'07:20 旧金山时间出发，11:10 夏威夷时间计划抵达。飞行 5 小时 50 分，夏威夷比旧金山慢 2 小时。',flight:0,notes:['起飞时间来自订单；到达时间来自按日期、航线和起飞时间匹配的 AS811 官方时刻表。','下面按正常抵达安排，交通与等候时间是规划预留。若延误，先缩短散步，并按午餐截止方案调整。']},
+        {time:'07:20 PST',type:'交通',title:'飞往檀香山 · 11:10 HST 抵达',text:'07:20 旧金山时间出发，11:10 夏威夷时间计划抵达。飞行 5 小时 50 分，夏威夷比旧金山慢 2 小时。',flight:0,notes:['起飞时间来自订单；到达时间来自按日期、航线和起飞时间匹配的 AS811 官方时刻表。','下面按正常抵达安排，交通与等候时间是规划预留。若延误影响 13:00 午餐，及时联系餐厅调整预约，下午散步可以缩短。']},
         {time:'11:10–12:00',type:'交通',title:'下机、取行李，走到乘车点',text:'预留约 50 分钟办理抵达后的事项，目标 12 点左右出发去酒店。',place:'Daniel K Inouye International Airport Honolulu',notes:['这是下机、行李提取和找车的时间预算，实际按当天情况调整。','SFO → HNL 为美国国内航班；当天不取租车。']},
-        {time:'12:00–12:45',type:'交通',title:'打车到 Halepuna，先寄存行李',text:'从 HNL 直接去 Halepuna Waikiki by Halekulani，预留约 45 分钟乘车及寄存。',place:'Halepuna Waikiki by Halekulani 2233 Helumoa Road Honolulu HI 96815',notes:['45 分钟是交通与办理寄存的合计预算，车程随路况变化。','提前向酒店确认行李寄存；不要把中午到店当成已获准提前入住。','若 13:15 后才准备好离开酒店，午餐改附近简餐，不赶银座梅林。']},
-        {time:'约 13:00',type:'餐饮',title:'银座梅林 · Ginza Bairin 午餐',text:'寄存后步行到 255 Beach Walk。目标 13 点用餐，安排炸猪排午饭；目前未订位。',place:'Ginza Bairin 255 Beach Walk Honolulu HI 96815',notes:['官网午餐每日 11:00–14:00，最后入座 14:00；这不代表到店一定有座位。','如果这顿一定要吃，优先查看 Yelp 的 13:00 订位；若选 walk-in，到店先问预计入座时间。','若预计要等超过 30 分钟，或无法在 14:00 前入座，就改附近简餐。30 分钟是我们设定的等待上限，并非餐厅预计排队时间。','航班明显延误时，及时调整已有订位；不把午餐设成必须赶到的项目。']},
+        {time:'12:00–12:45',type:'交通',title:'打车到 Halepuna，先寄存行李',text:'从 HNL 直接去 Halepuna Waikiki by Halekulani，预留约 45 分钟乘车及寄存。',place:'Halepuna Waikiki by Halekulani 2233 Helumoa Road Honolulu HI 96815',notes:['45 分钟是交通与办理寄存的合计预算，车程随路况变化。','提前向酒店确认行李寄存；不要把中午到店当成已获准提前入住。','目标 12:45 左右寄存完毕，再步行去餐厅；若预计赶不上 13:00，提前联系餐厅调整预约。']},
+        {time:'13:00',type:'餐饮',title:'银座梅林 · Ginza Bairin 午餐',text:'12/23 13:00（夏威夷时间）猪排午餐座位已订。寄存行李后步行到 255 Beach Walk 用餐。',confirmed:true,place:'Ginza Bairin 255 Beach Walk Honolulu HI 96815',notes:['按目前已订的 13:00 安排，目标提前约 10 分钟到店；抵达时间为我们的预留。','若航班或取行李延误，预计无法准时到店时，使用自己的 Yelp 预约页面或联系餐厅修改、取消。','迟到保留时长与取消条款以预约说明为准，不能把午餐最后入座时间当成可迟到期限。']},
         {time:'约 14:00',type:'散步',title:'Waikiki 海边，轻松走一会儿',text:'午饭后在酒店附近和海边随意走走，15 点回酒店。',place:'Waikiki Beach Honolulu',notes:['这段作为可压缩的缓冲。午饭较晚或累了，就先回酒店休息。']},
         {time:'15:00 后',type:'住宿',title:'Halepuna 入住，洗澡休息',text:'12/23–12/28 五晚已预订。15:00 后办理入住，下午留给休息。',hotel:'halepuna',place:'Halepuna Waikiki by Halekulani 2233 Helumoa Road Honolulu HI 96815',notes:['入住时间为夏威夷当地时间，提前入住取决于酒店当天房态。','本次预订注明无度假村费；房型与取消条款待补充。','若行程变化至 21:00 后才抵达，须直接联系酒店。']},
         {time:'约 18:30',type:'餐饮',title:'福缘 · Fook Yuen 晚餐',text:'休息好再出门吃海鲜，龙虾或其他海鲜搭配青菜和面饭。',place:'Fook Yuen Seafood Restaurant Honolulu',notes:['18:30 为用餐目标，营业、菜单与订位仍待确认。','海鲜先问时价，再按食量点菜。']}
