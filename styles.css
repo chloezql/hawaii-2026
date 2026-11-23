@@ -254,7 +254,9 @@ dialog::backdrop { background: #173b3c77; backdrop-filter: blur(3px); }
 .hotel-info { margin-top: 16px; font-size: .875rem; }
 .hotel-times { display: flex; flex-wrap: wrap; gap: 5px 16px; }
 .hotel-address { color: var(--muted); margin-top: 12px; overflow-wrap: anywhere; }
+.hotel-room { margin-top: 12px; font-size: 1rem; }
 .hotel-info .text-link { font-size: .875rem; margin-top: 7px; }
+.hotel-info .text-link + .text-link { margin-left: 14px; }
 .checkout-note { display: flex; align-items: baseline; gap: 8px; color: var(--muted); font-size: .875rem; margin-top: 16px; }
 .checkout-note .icon { width: 17px; height: 17px; }
 .pocket-body > h2 { margin-top: 5px; }

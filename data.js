@@ -1,4 +1,4 @@
-/* 行程来源：2026/11/16 完整排班表；三段航班、欧胡及 Hilo 酒店依据用户提供的预订截图更新。
+/* 行程来源：2026/11/16 完整排班表；三段航班和三家酒店依据用户提供的预订截图更新。
    仅 confirmed 标记的项目已预订。截图未显示的航班号与到达时间不作推断。
    公开数据不包含姓名、订单号、预订确认号或原始截图。 */
 window.TRIP = {
@@ -11,7 +11,7 @@ window.TRIP = {
   hotels: [
     {id:'halepuna',name:'Halepuna Waikiki by Halekulani',confirmed:true,area:'Waikiki · 欧胡',in:'2026-12-23',out:'2026-12-28',nights:5,checkin:'15:00',checkout:'12:00',address:'2233 Helumoa Road, Honolulu, HI 96815',phone:'+1 808-921-7272',query:'Halepuna Waikiki by Halekulani 2233 Helumoa Road Honolulu HI 96815',note:'本次预订注明无度假村费。若入住当天 21:00 后抵达，须直接联系酒店，以免预订被取消。27 日停车安排待确认。'},
     {id:'hilo-hawaiian',name:'Hilo Hawaiian Hotel',confirmed:true,area:'Hilo · 大岛东岸',in:'2026-12-28',out:'2026-12-30',nights:2,checkin:'15:00',checkout:'12:00',query:'Hilo Hawaiian Hotel Trademark Collection by Wyndham Hilo Hawaii',note:'预订注明免费自行停车和免费 Wi-Fi。房型、取消条款和行李寄存安排待补充；观星团能否到这家酒店接送、具体集合地点与时间须向团方确认。'},
-    {id:'kona',name:'Kona 酒店待选',area:'Kailua-Kona · 大岛西岸',in:'2026-12-30',out:'2027-01-01',nights:2,query:null,note:'当前按住 Kailua-Kona 镇附近排。若改住 Waikoloa，1/1 上午改在 A-Bay／度假区活动，避免折返。'}
+    {id:'kona',name:'Kona Coast Resort',confirmed:true,area:'Keauhou · 大岛西岸',in:'2026-12-30',out:'2027-01-01',nights:2,checkin:'16:00',checkout:'10:00',room:'One bedroom Villa Honu（一卧室别墅）',address:'78-6842 Alii Drive, Kailua-Kona, HI 96740',phone:'+1 808-324-1721',official:'https://www.shellvacationsclub.com/club/resorts/kona_coast/index.page',query:'Kona Coast Resort 78-6842 Alii Drive Kailua-Kona HI 96740',note:'预订注明免费自行停车和免费 Wi-Fi。1/1 须在 10:00 前退房；取消条款与具体入住手续待补充。酒店地址与电话已按官网核对。'}
   ],
   rentals: [
     {title:'欧胡 · 短租一段',start:'12/27 上午 · 取车地点待定',end:'12/28 早上 · HNL 还车',note:'植物园 → 古兰尼 → 北岸；23–26 日不连续租车。是否按一天计费，以实际取还时间与订单为准。'},
@@ -98,19 +98,19 @@ window.TRIP = {
       ]
     },
     {
-      date:'2026-12-30',area:'Hilo → Kona',region:'kona',title:'骑过牧场，慢慢去西岸',english:'Through the green highlands.',intro:'带上行李离开 Hilo。骑马之后经过 Honokaʻa 和 Waimea，傍晚在西岸安顿。',hotel:'kona',checkout:'hilo-hawaiian',transport:'自驾换酒店 · 行李随车',route:['Hilo','骑马','Honokaʻa','Waipiʻo 观景台','Waimea','Kona'],tags:['骑马','高地牧场','换酒店'],
-      meals:{breakfast:'出发前简单吃',lunch:'Honokaʻa 午餐',dinner:'西岸酒店附近'},todo:['确定骑马运营商、地址、场次与参加要求','按骑马场实际地址核对早上车程','确定 Kona 酒店与入住时间','核对 Waipiʻo 观景台开放及停车安排'],
+      date:'2026-12-30',area:'Hilo → Kona',region:'kona',title:'骑过牧场，慢慢去西岸',english:'Through the green highlands.',intro:'带上行李离开 Hilo。骑马之后经过 Honokaʻa 和 Waimea，傍晚在 Kona Coast Resort 安顿。',hotel:'kona',checkout:'hilo-hawaiian',transport:'自驾换酒店 · 行李随车',route:['Hilo','骑马','Honokaʻa','Waipiʻo 观景台','Waimea','Kona Coast Resort'],tags:['骑马','高地牧场','换酒店'],
+      meals:{breakfast:'出发前简单吃',lunch:'Honokaʻa 午餐',dinner:'Kona Coast Resort 附近简餐'},todo:['确定骑马运营商、地址、场次与参加要求','按骑马场实际地址核对早上车程','补充 Kona Coast Resort 取消条款与具体入住手续','核对 Waipiʻo 观景台开放及停车安排'],
       events:[
         {time:'07:30',type:'交通',title:'退房，带全部行李出发',text:'今天不再回 Hilo，朝大岛西岸移动。',notes:['行李全部随车；停车时将物品收好，避免外露。','7:30 是目前的出发目标，须按骑马场地址重新核对。']},
         {time:'09:00 报到 · 目标 09:30',type:'体验',title:'在牧场骑马',text:'骑马运营商和具体位置待定，目标上午场，约中午结束。',notes:['项目时长、报到地点、着装与参加限制待所选运营商确认。','不能仅按“骑马”搜索结果导航，预订后补准确集合点。']},
         {time:'午餐',type:'餐饮',title:'Honokaʻa 小镇午饭',text:'骑马后在小镇吃午饭，具体餐厅待选。',place:'Honokaa Hawaii',notes:['按实际结束时间挑营业的餐厅。']},
         {time:'下午',type:'自然',title:'Waipiʻo 观景台',text:'只按观景台短停安排，开放与停车须提前核对。',place:'Waipio Valley Lookout Hawaii',notes:['本行程不包含开车或徒步下谷。','若观景台关闭或时间不合适，直接继续去 Waimea。']},
         {time:'下午',type:'散步',title:'Waimea 高地，咖啡点心短停',text:'经过高地牧场风景，找个地方坐坐，慢慢去西岸。',place:'Waimea Hawaii Island',notes:['停车点和咖啡店待选，不预设不可变的到访时间。']},
-        {time:'约 17:00',type:'住宿',title:'抵达 Kona，住下来',text:'当前按 Kailua-Kona 镇附近住宿安排，晚饭在附近解决。',notes:['酒店尚未选定，到达时间随最终住宿位置调整。']}
+        {time:'约 17:00',type:'住宿',title:'抵达 Kona Coast Resort',text:'12/30–1/1 两晚已预订。傍晚抵达后入住，晚饭在附近简单解决；到达时间随当天行程与路况调整。',hotel:'kona',place:'Kona Coast Resort 78-6842 Alii Drive Kailua-Kona HI 96740',notes:['16:00 后入住；One bedroom Villa Honu（一卧室别墅）。','预订注明免费自行停车和免费 Wi-Fi。','入住手续与取消条款待补充，1/1 须在 10:00 前退房。']}
       ]
     },
     {
-      date:'2026-12-31',area:'Kona',region:'kona',title:'咖啡香里，等新的一年',english:'One last sunset of the year.',intro:'南 Kona 的咖啡农场与海岸历史，晚上留给一顿跨年晚饭。',hotel:'kona',transport:'自驾 · 南 Kona 往返',route:['Kona','Greenwell Farms','Hōnaunau','酒店','Huggo’s'],tags:['咖啡农场','海岸历史','跨年'],
+      date:'2026-12-31',area:'Kona',region:'kona',title:'咖啡香里，等新的一年',english:'One last sunset of the year.',intro:'从 Kona Coast Resort 出发，走南 Kona 的咖啡农场与海岸历史，晚上留给一顿跨年晚饭。',hotel:'kona',transport:'自驾 · 南 Kona 往返',route:['Kona Coast Resort','Greenwell Farms','Hōnaunau','酒店','Huggo’s'],tags:['咖啡农场','海岸历史','跨年'],
       meals:{breakfast:'酒店或 Kona 附近',lunch:'南 Kona 午饭，餐厅待选',dinner:'Huggo’s · 跨年晚饭暂定'},todo:['核对 Greenwell Farms 节日导览安排','核对历史公园开放信息','确认 Huggo’s 跨年营业、菜单与订位','留意当地公布的跨年活动'],
       events:[
         {time:'上午',type:'体验',title:'Greenwell Farms 咖啡农场',text:'导览、试喝，挑一些咖啡豆带回家。',place:'Greenwell Farms Kona Hawaii',notes:['导览时间、是否预约与节日营业安排待核对。']},
@@ -121,11 +121,12 @@ window.TRIP = {
       ]
     },
     {
-      date:'2027-01-01',area:'Kona',region:'kona',title:'新年第一天，把海风带回家',english:'Until the next island.',intro:'最后半天不赶路。海滨散步、Umekes 午饭，再去机场还车回家。',hotel:null,checkout:'kona',transport:'自驾 · KOA 还车 · 飞 SFO',route:['Kona 海滨','Umekes','KOA','SFO'],tags:['新年','返程日'],
-      meals:{breakfast:'酒店或附近早餐',lunch:'11:00 Umekes',dinner:'机场或机上安排'},todo:['补充回程航班号、到达时间与行李额度，确认还车时间','核对 Umekes 元旦营业','按最终酒店位置调整上午路线'],
+      date:'2027-01-01',area:'Kona',region:'kona',title:'新年第一天，把海风带回家',english:'Until the next island.',intro:'10:00 前从 Kona Coast Resort 退房，再去海滨散步、吃 Umekes 午饭，之后还车回家。',hotel:null,checkout:'kona',transport:'自驾 · KOA 还车 · 飞 SFO',route:['Kona Coast Resort','Kona 海滨','Umekes','KOA','SFO'],tags:['新年','返程日'],
+      meals:{breakfast:'酒店内或附近自行安排，10:00 前退房',lunch:'11:00 Umekes',dinner:'机场或机上安排'},todo:['补充回程航班号、到达时间与行李额度，确认还车时间','核对 Umekes 元旦营业','按路况核对退房后前往海滨、午餐与机场的衔接'],
       events:[
-        {time:'早餐后',type:'住宿',title:'退房，再看一会儿海',text:'行李装好，去 Kona 海滨散步，最后半天留得轻松一些。',place:'Kailua Kona Waterfront Hawaii',notes:['此安排基于住 Kona 镇附近。','如果住 Hilton Waikoloa Village，上午改为 A-Bay／度假区附近活动，不往镇上折返。']},
-        {time:'11:00',type:'餐饮',title:'Umekes，新年第一顿午饭',text:'候选午餐，元旦营业和到店时间待确认。',place:'Umekes Fish Market Bar and Grill Kailua Kona',notes:['若最终住 Waikoloa，需连同机场路线一起重新安排，不能为这顿饭折返赶路。']},
+        {time:'10:00 前',type:'住宿',title:'Kona Coast Resort 退房',text:'早餐后整理全部行李，10:00 前办好退房，再继续当天行程。',hotel:'kona',place:'Kona Coast Resort 78-6842 Alii Drive Kailua-Kona HI 96740',notes:['退房时间按已确认的预订执行，均为夏威夷当地时间。','退房后带齐行李，不再安排返回酒店取行李。']},
+        {time:'退房后',type:'散步',title:'Kona 海滨，再看一会儿海',text:'从酒店出发去 Kona 海滨走走，之后吃午饭，再去机场；停留长短按路况与体力安排。',place:'Kailua Kona Waterfront Hawaii',notes:['路线按 Kona Coast Resort → Kona 海滨 → Umekes → KOA 的顺序衔接，预留还车、接驳和机场办理手续的时间。']},
+        {time:'11:00',type:'餐饮',title:'Umekes，新年第一顿午饭',text:'候选午餐，元旦营业和到店时间待确认。',place:'Umekes Fish Market Bar and Grill Kailua Kona',notes:['午饭后继续去机场方向，不安排返回酒店；若营业时间或路况不合适，就改简餐。']},
         {time:'午后',type:'交通',title:'短停、加油，往机场走',text:'不再安排新的大项目，给还车和接驳留出余量。',notes:['加油要求、还车位置与接驳方式按租车订单确认。']},
         {time:'约 14:00',type:'交通',title:'KOA 还车，前往航站楼',text:'目标 14 点左右还车，再接驳去机场办理值机。',place:'Kona International Airport Hawaii',notes:['按最终航班、租车还车及航空公司要求核对时间。']},
         {time:'16:53 起飞',type:'交通',title:'Kona → 旧金山',text:'Alaska Airlines 经济舱已预订。16:53 从 KOA 起飞，使用夏威夷当地时间。',flight:2,notes:['航班号、到达时间、航站楼与行李额度待补充。']}
