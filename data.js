@@ -2,7 +2,7 @@
    仅 confirmed 标记的项目已预订。补充的公开航班时刻注明来源，与订单确认信息区分。
    公开数据不包含姓名、订单号、预订确认号或原始截图。 */
 window.TRIP = {
-  updated: '2026-11-22',
+  updated: '2026-11-26',
   flights: [
     {date:'2026-12-23',name:'飞往欧胡',airline:'Alaska Airlines',confirmed:true,cabin:'经济舱',from:'SFO',to:'HNL',depart:'07:20',arrive:'11:10',depZone:'旧金山 PST',arrZone:'檀香山 HST',scheduleSource:'https://public.alaskacargo.com/getmedia/e35baf10-59a4-4cd6-90a0-eda1ce157f62/cargoschedule-202612-all#page=10',note:'按 12/23 航线与 07:20 起飞时间匹配 AS811；11:10 计划抵达，飞行 5 小时 50 分。到达时刻来自 Alaska 官方 12 月时刻表（11/10 版本），以航司后续更新为准。航班号尚未与完整订单核对；行李额度按订单确认。'},
     {date:'2026-12-28',name:'欧胡 → 大岛',airline:'Alaska Airlines',confirmed:true,cabin:'经济舱',from:'HNL',to:'ITO',depart:'09:31',arrive:null,depZone:'檀香山 HST',arrZone:'Hilo HST',note:'已预订经济舱，09:31 从 HNL 起飞。航班号、到达时间、航站楼与行李额度待补充。先在 HNL 还车，到 ITO 后另取租车，并与观星团集合安排衔接。'},
@@ -19,9 +19,9 @@ window.TRIP = {
   ],
   days: [
     {
-      date:'2026-12-23',area:'欧胡',region:'oahu',title:'落地，切换海岛时间',english:'Hello, island time.',intro:'11:10 计划抵达，先去酒店寄存行李，银座梅林已订 13:00，15 点后入住休息。',hotel:'halepuna',bookingLabel:'午餐',transport:'HNL 打车到 Halepuna · Waikiki 步行；落地后均为夏威夷时间',route:['SFO','HNL','Halepuna 寄存','银座梅林','Waikiki','Halepuna 入住','福缘'],tags:['抵达日','海边散步'],
-      meals:{breakfast:'出发前或机上安排',lunch:'已订 13:00 银座梅林 · 炸猪排午餐',dinner:'目标 18:30 福缘 Fook Yuen · 海鲜，未订位'},
-      todo:['将公开时刻表匹配的 AS811 与完整订单核对，确认行李额度','确认 Halepuna 提前寄存行李，补充房型与取消条款','核对福缘营业时间并决定是否订位'],
+      date:'2026-12-23',area:'欧胡',region:'oahu',title:'落地，切换海岛时间',english:'Hello, island time.',intro:'11:10 计划抵达，银座梅林已订 13:00。15 点后入住休息，晚餐暂定 Han no Daidokoro Kakaʻako 店。',hotel:'halepuna',bookingLabel:'午餐',transport:'HNL 到酒店及晚餐往返打车 · Waikiki 步行；落地后均为夏威夷时间',route:['SFO','HNL','Halepuna 寄存','银座梅林','Waikiki','Halepuna 入住','Han no Daidokoro Kakaʻako'],tags:['抵达日','海边散步'],
+      meals:{breakfast:'出发前或机上安排',lunch:'已订 13:00 银座梅林 · 炸猪排午餐',dinner:'目标 18:30 Han no Daidokoro Kakaʻako／Ward Village 店 · 待订'},
+      todo:['将公开时刻表匹配的 AS811 与完整订单核对，确认行李额度','确认 Halepuna 提前寄存行李，补充房型与取消条款','查看 12/23 Han no Daidokoro Kakaʻako 店 18:30 左右的两人订位'],
       events:[
         {time:'07:20 PST',type:'交通',title:'飞往檀香山 · 11:10 HST 抵达',text:'07:20 旧金山时间出发，11:10 夏威夷时间计划抵达。飞行 5 小时 50 分，夏威夷比旧金山慢 2 小时。',flight:0,notes:['起飞时间来自订单；到达时间来自按日期、航线和起飞时间匹配的 AS811 官方时刻表。','下面按正常抵达安排，交通与等候时间是规划预留。若延误影响 13:00 午餐，及时联系餐厅调整预约，下午散步可以缩短。']},
         {time:'11:10–12:00',type:'交通',title:'下机、取行李，走到乘车点',text:'预留约 50 分钟办理抵达后的事项，目标 12 点左右出发去酒店。',place:'Daniel K Inouye International Airport Honolulu',notes:['这是下机、行李提取和找车的时间预算，实际按当天情况调整。','SFO → HNL 为美国国内航班；当天不取租车。']},
@@ -29,7 +29,7 @@ window.TRIP = {
         {time:'13:00',type:'餐饮',title:'银座梅林 · Ginza Bairin 午餐',text:'12/23 13:00（夏威夷时间）猪排午餐座位已订。寄存行李后步行到 255 Beach Walk 用餐。',confirmed:true,place:'Ginza Bairin 255 Beach Walk Honolulu HI 96815',notes:['按目前已订的 13:00 安排，目标提前约 10 分钟到店；抵达时间为我们的预留。','若航班或取行李延误，预计无法准时到店时，使用自己的 Yelp 预约页面或联系餐厅修改、取消。','迟到保留时长与取消条款以预约说明为准，不能把午餐最后入座时间当成可迟到期限。']},
         {time:'约 14:00',type:'散步',title:'Waikiki 海边，轻松走一会儿',text:'午饭后在酒店附近和海边随意走走，15 点回酒店。',place:'Waikiki Beach Honolulu',notes:['这段作为可压缩的缓冲。午饭较晚或累了，就先回酒店休息。']},
         {time:'15:00 后',type:'住宿',title:'Halepuna 入住，洗澡休息',text:'12/23–12/28 五晚已预订。15:00 后办理入住，下午留给休息。',hotel:'halepuna',place:'Halepuna Waikiki by Halekulani 2233 Helumoa Road Honolulu HI 96815',notes:['入住时间为夏威夷当地时间，提前入住取决于酒店当天房态。','本次预订注明无度假村费；房型与取消条款待补充。','若行程变化至 21:00 后才抵达，须直接联系酒店。']},
-        {time:'约 18:30',type:'餐饮',title:'福缘 · Fook Yuen 晚餐',text:'休息好再出门吃海鲜，龙虾或其他海鲜搭配青菜和面饭。',place:'Fook Yuen Seafood Restaurant Honolulu',notes:['18:30 为用餐目标，营业、菜单与订位仍待确认。','海鲜先问时价，再按食量点菜。']}
+        {time:'约 18:30',type:'餐饮',title:'Han no Daidokoro · Kakaʻako 店',text:'晚餐暂定在 Ward Village 的 Kakaʻako 店吃烤肉，地址 1108 Auahi St #150。18:30 是目标时间，目前未订位。',place:'Han no Daidokoro Kakaako 1108 Auahi St #150 Honolulu HI 96814',notes:['从 Halepuna 打车往返；目标 18:00 左右出发，半小时是交通与提前到店的规划预留，按路况调整。','订位选择 Kakaʻako／1108 Auahi St 这家店。实时余位尚未确认，查看 OpenTable 或致电 (808) 517-3229。','官网常规周日到周四晚餐 17:00–21:30，最后入座 20:30；12/23 实际场次以订位页面为准。','13:00 午餐已订猪排，下午充分休息；晚上按胃口单点宫崎牛、Washu 牛，搭配蔬菜，不必为了套餐吃太撑。']}
       ]
     },
     {
@@ -46,14 +46,14 @@ window.TRIP = {
       ]
     },
     {
-      date:'2026-12-25',area:'欧胡',region:'oahu',title:'海上观鲸，沿岸兜风',english:'A Christmas by the sea.',intro:'吃好早餐再出海。午间用饭团轻轻垫一下，下午坐蓝线看海岸。',hotel:'halepuna',transport:'观鲸接送／打车 · Trolley',route:['Waikiki','观鲸码头','蓝线环线','烤肉','Hilton'],tags:['海岛圣诞','观鲸','蓝线环游'],
-      meals:{breakfast:'酒店或附近 · 鸡蛋、吐司／三明治',lunch:'两个人先买两个饭团，饿了再补',dinner:'17:30 Han no Daidokoro 烤肉'},todo:['确认 10:00 观鲸场次、码头与接送','核对蓝线圣诞班表及候车地点','确认烤肉节日营业与 17:30 订位','核对 12/25 Hilton 是否燃放烟花'],
+      date:'2026-12-25',area:'欧胡',region:'oahu',title:'海上观鲸，沿岸兜风',english:'A Christmas by the sea.',intro:'吃好早餐再出海。午间用饭团轻轻垫一下，下午坐蓝线看海岸；晚餐餐厅待选，ROKC 的圣诞营业待核实，福缘保留为备选。',hotel:'halepuna',transport:'观鲸接送／打车 · Trolley',route:['Waikiki','观鲸码头','蓝线环线','圣诞晚餐','Hilton'],tags:['海岛圣诞','观鲸','蓝线环游'],
+      meals:{breakfast:'酒店或附近 · 鸡蛋、吐司／三明治',lunch:'两个人先买两个饭团，饿了再补',dinner:'目标 17:30 圣诞晚餐 · 餐厅待选，ROKC 营业待核实，福缘备选'},todo:['确认 10:00 观鲸场次、码头与接送','核对蓝线圣诞班表及候车地点','核实 ROKC 2026/12/25 是否营业，并确定圣诞晚餐餐厅与订位','核对 12/25 Hilton 是否燃放烟花'],
       events:[
         {time:'早餐',type:'餐饮',title:'先吃一顿扎实的早餐',text:'鸡蛋、吐司或三明治。今天午饭较轻，早餐不用省。',notes:['在酒店或附近解决，给前往码头留好时间。']},
         {time:'10:00–11:30',type:'体验',title:'出海，寻找鲸鱼',text:'目标为纯观鲸船团，具体运营商和集合码头待定。',notes:['时段为计划，未订船团。','是否含接送、准确报到时间和天气取消政策，订前一起确认。']},
-        {time:'中午',type:'餐饮',title:'两个饭团，轻轻垫一下',text:'不安排正式午餐。两人先买两个饭团，饿了再补。',notes:['饭团在上 Trolley 前吃完。','17:30 吃烤肉，午间按胃口安排即可。']},
+        {time:'中午',type:'餐饮',title:'两个饭团，轻轻垫一下',text:'不安排正式午餐。两人先买两个饭团，饿了再补。',notes:['饭团在上 Trolley 前吃完。','晚餐以 17:30 左右为目标，午间按胃口安排即可。']},
         {time:'约 13:00 · 2 小时车程预算',type:'体验',title:'Ocean View 蓝线，坐一圈',text:'沿东南海岸看风景，以坐完整个 loop 为主，不专门进 Sea Life Park。',place:'Waikiki Shopping Plaza Royal Hawaiian Avenue',notes:['圣诞当天是否运行与发车时间待确认。','规划从 Waikiki Shopping Plaza 的 Royal Hawaiian Avenue 一侧上车，具体候车点按运营方指示。','建议提前约 20 分钟到始发站候车。两小时是车程预算，排队候车另外留余量。','坐完回酒店休息；若班表不合适，就在 Waikiki 放松。']},
-        {time:'17:30',type:'餐饮',title:'Han no Daidokoro 烤肉',text:'宫崎牛、Washu 牛混合点，配蔬菜和米饭。',place:'Han no Daidokoro Honolulu',notes:['目标用餐时间，尚未确认订位。','核对圣诞营业时间和节日菜单。']},
+        {time:'约 17:30',type:'餐饮',title:'圣诞晚餐 · 餐厅待选',text:'25 日晚餐尚未订位。ROKC Hawaii 的圣诞营业待核实，福缘保留为备选；确认餐厅后再补地图。',notes:['ROKC 位于 280 Beach Walk, Suite 106。2025/12/24 的 Aloha Street 报道写明当年 12/25 和 12/31 休业；截至 11/26 未查到 2026/12/25 的明确公告，不能用去年消息直接确认今年关门。','可通过餐厅 Instagram @rokchawaii 询问今年 12/25 是否营业；常规营业时间不等于圣诞确认。','福缘备选：致电 (808) 973-0168 核对圣诞营业和订位，目前也未确认。','饭后是否去看烟花按实际结束时间与燃放公告决定。']},
         {time:'19:45 · 待核实',type:'散步',title:'如果有烟花，就去海边',text:'Hilton 烟花作为可选安排，须先确认当天是否燃放。',place:'Hilton Hawaiian Village Waikiki',optional:true,notes:['不把常规周五烟花时间视为圣诞当天的保证。','未燃放或太累时，直接在附近散步、回酒店。']}
       ]
     },

@@ -30,3 +30,7 @@
 ## GitHub Pages
 
 将本仓库的 `main` 分支根目录设为 GitHub Pages 发布来源即可。所有本地资源使用相对路径，支持 `/hawaii-2026/` 项目路径。仓库中不包含需要提交的构建产物。
+
+## 11/26 晚餐计划调整
+
+Han no Daidokoro 暂移至 12/23 18:30 的 Kakaʻako／Ward Village 店（1108 Auahi St #150），尚未订位；门店、常规营业及订位入口已按[餐厅官网](https://hannodaidokoro.com/)核对。12/25 晚餐餐厅待选：ROKC 今年圣诞营业尚未核实，[2025/12/24 Aloha Street 报道](https://www.aloha-street.com/article/2025/12/423130/)的 12/25 休业信息仅适用于当年，不能据此确认 2026 休业。福缘保留为备选，其圣诞营业及订位也未确认。13:00 银座梅林已订午餐保留。
